@@ -10,8 +10,8 @@ var arrayOfMovingAsteroids = document.getElementsByClassName("moving");
       // detect if asteroid's bounding box overlaps with space ship's bounding box
       var collision = !(asteroidBox.right < shipBox.left ||
         asteroidBox.left > shipBox.right ||
-        asteroidBox.bottom < (shipBox.top +30) ||
-        asteroidBox.top > (shipBox.bottom -30));
+        asteroidBox.bottom < (shipBox.top + 30) ||
+        asteroidBox.top > (shipBox.bottom - 30));
     // move current asteroid 2px to the left (but remove it from the "moving" array if it's already offscreen)
     if (parseInt(arrayOfMovingAsteroids[i].style.right) < 3000) {
       arrayOfMovingAsteroids[i].style.right = parseInt(arrayOfMovingAsteroids[i].style.right) + 5 + 'px';

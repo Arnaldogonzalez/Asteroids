@@ -19,8 +19,7 @@ var x = {
 module.exports =  function shipMove(){
   window.onkeydown = keyDown;
   window.onkeyup = keyUp;
-  function keyDown(playerKeyPress)
-{
+  function keyDown(playerKeyPress){
    x.keyPressed = playerKeyPress.which;
   if (x.keyPressed == 38)
     x.upPressed = 1;
@@ -32,8 +31,7 @@ module.exports =  function shipMove(){
     x.rightPressed = 1;
 }
 
-function keyUp(playerKeyPress)
-{
+function keyUp(playerKeyPress){
   if (x.keyPressed == 38)
     x.upPressed = 0;
   if (x.keyPressed == 40)
@@ -44,18 +42,16 @@ function keyUp(playerKeyPress)
     x.rightPressed = 0;
 }
 
-  function slowDownX()
-{
+  function slowDownX(){
   if (x.xSpeed > 0)
-    x.xSpeed = x.xSpeed -1;
+    x.xSpeed = x.xSpeed - 1;
   if (x.xSpeed < 0)
     x.xSpeed = x.xSpeed + 1;
 }
 
-function slowDownY()
-{
+function slowDownY(){
   if (x.ySpeed > 0)
-    x.ySpeed = x.ySpeed -1;
+    x.ySpeed = x.ySpeed - 1;
   if (x.ySpeed < 0)
     x.ySpeed = x.ySpeed + 1;
 }
@@ -71,13 +67,13 @@ document.getElementById('ship').style.top = x.yPosition;
 
 // change speed when user presses keys
 if (x.upPressed == 1)
-   x.ySpeed = Math.max(x.ySpeed -1, -1 * x.maxSpeed);
+   x.ySpeed = Math.max(x.ySpeed - 1, - 1 * x.maxSpeed);
 if (x.downPressed == 1)
-   x.ySpeed = Math.min(x.ySpeed + 1, 1 * x.maxSpeed)
+   x.ySpeed = Math.min(x.ySpeed + 1, 1 * x.maxSpeed);
 if (x.rightPressed == 1)
    x.xSpeed = Math.min(x.xSpeed + 1, 1 * x.maxSpeed);
 if (x.leftPressed == 1)
-   x.xSpeed = Math.max(x.xSpeed -1, -1 * x.maxSpeed);
+   x.xSpeed = Math.max(x.xSpeed - 1, - 1 * x.maxSpeed);
 
 // deceleration
 if (x.upPressed == 0 && x.downPressed == 0)
