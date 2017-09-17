@@ -1,0 +1,43 @@
+1-How do we measure the length of the critical rendering path? (10 pts)
+
+///I-The number of server round trips your page must do in order to fully load and render
+II-The number of actions the browser must take (eg run js, build cssom, build dom, etc) in order to fully load and render your page
+III-By counting the number of all external resources that must be loaded
+IV-By counting the number of render-blocking external resources that must be loaded
+
+2-What are the events in the Timeline pane which show the DOM being built, the CSSOM being built, and the render tree being built? (10 pts)
+
+///I-Parse HTML, Parse CSS, Layout
+II-Parse HTML, Recalculate Style, Layout
+III-Parse HTML, Recalculate Style, Paint
+
+3-What is the render tree? (10 pts)
+
+4-What are three things you can do in order to speed up a website's load time? (10 pts)
+
+    //I can reduce the number of files. Another option to speed up your website is by limiting the number of files that load. This is because for every file you try to load, your browser sends a separate HTTP request to the server. Fewer files means fewer requests and therefore a faster website.//
+    //I select the image or images that I want to edit and change their size in paint.net, photoshop or any other program that allows//
+    //It can be no more than an external CSS style sheet of a reasonable size//
+
+5-What is the name of the Google tool you can use to see a list of things you can do to improve your page's load speed? (10 pts)
+
+  //Performance
+  //The render tree is a way of calculating the design of each visible element and serves as input to the painting process
+  that causes the pixels to be displayed.
+
+6-What is the purpose of including multiple <source> elements within a single <video> element?
+
+
+
+
+2-Go to the Google PageSpeed insights page and analyze ncl.com Choose three of the shortcomings this website has and explain the specific
+ tools and workflows we discussed in class which could help this website address these shortcomings.
+ (Dirijase a la herramienta Google PageSpeed Insights y analice el sitio ncl.com. Basado en lo que dice la herramienta, enumere tres medidas especificas
+ que discutimos en clase para corregir tres de los problemas senalados por la herramienta PageSpeed Insights)(20pts)
+
+3-What is the render tree?(20pts)
+
+4-Explain the process of a how a website loads in terms of the internal data structures built and used by the browser (DOM, CSSOM, etc).(20pts)
+
+  ///The browser reads all bytes of HTML and translates them to individual characters based on the specified encoding of the file.
+  The browser converts the bytes into characters, it also identifies the tokens to later convert the tokens to nodes and creates the DOM tree.
